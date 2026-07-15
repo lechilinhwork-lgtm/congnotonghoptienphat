@@ -1,0 +1,9 @@
+{
+  "name": "Công Nợ Đồng Tâm KV23",
+  "short_name": "Công Nợ KV23",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f2f4f7",
+  "theme_color": "#c0392b",
+  "icons": []
+}

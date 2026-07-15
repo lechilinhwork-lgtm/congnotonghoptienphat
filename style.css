@@ -1,0 +1,68 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #f2f4f7; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c2333; }
+#root { min-height: 100vh; }
+
+.app { display: flex; flex-direction: column; min-height: 100vh; max-width: 480px; margin: 0 auto; background: #f2f4f7; }
+
+.header { background: #c0392b; color: #fff; padding: 14px 16px; font-weight: 700; font-size: 17px; position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; }
+.header-role { font-size: 12px; font-weight: 600; background: rgba(255,255,255,.2); padding: 3px 10px; border-radius: 999px; }
+
+.role-screen { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; max-width: 480px; margin: 0 auto; }
+.role-title { font-size: 20px; font-weight: 800; text-align: center; }
+.role-sub { color: #78808f; font-size: 14px; }
+.role-cards { display: flex; gap: 16px; }
+.role-card { background: #fff; border: 1px solid #dfe3e9; border-radius: 14px; padding: 24px 28px; font-size: 32px; cursor: pointer; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.role-card div { font-size: 13px; font-weight: 700; margin-top: 8px; color: #1c2333; }
+.role-pin { text-align: center; font-size: 24px; letter-spacing: 6px; max-width: 180px; }
+.role-err { color: #c0392b; font-size: 13px; }
+
+.dash-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.dash-cell { border-top: 1px solid #eceff3; padding-top: 10px; }
+.dash-cell .amount { margin: 2px 0; }
+
+.pick-groups { max-height: 220px; overflow-y: auto; border: 1px solid #eceff3; border-radius: 8px; padding: 6px 10px; margin-top: 6px; }
+.invoice-pick-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid #f2f4f7; }
+.invoice-pick-row:last-child { border-bottom: none; }
+.invoice-pick-row span:first-of-type { flex: 1; }
+
+main { flex: 1; padding: 12px; padding-bottom: 80px; }
+
+.tabbar { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; display: flex; background: #fff; border-top: 1px solid #e2e5ea; }
+.tabbtn { flex: 1; background: none; border: none; padding: 8px 0 10px; font-size: 12px; color: #78808f; cursor: pointer; }
+.tabbtn.active { color: #c0392b; font-weight: 700; }
+.tab-label { margin-top: 2px; }
+
+.summary-card { background: #fff; border-radius: 14px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.summary-title { font-size: 13px; color: #78808f; font-weight: 600; margin-bottom: 6px; }
+.summary-value { font-size: 24px; font-weight: 800; color: #c0392b; }
+
+.card-list { display: flex; flex-direction: column; gap: 10px; }
+.invoice-card { background: #fff; border-radius: 12px; padding: 12px 14px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.amount { font-size: 18px; font-weight: 700; margin: 4px 0 8px; }
+
+.badge { font-size: 12px; padding: 3px 8px; border-radius: 999px; font-weight: 600; white-space: nowrap; }
+.badge.ok { background: #e6f7ec; color: #1e8e4d; }
+.badge.warn { background: #fff6e0; color: #b8860b; }
+.badge.overdue { background: #fdeaea; color: #c0392b; }
+
+.row { display: flex; align-items: center; }
+.row.between { justify-content: space-between; }
+.row.gap { gap: 8px; }
+
+.hint { color: #78808f; font-size: 13px; }
+.hint.center { text-align: center; padding: 24px 0; }
+
+.btn { border: none; border-radius: 10px; padding: 9px 14px; font-size: 13px; font-weight: 600; background: #eceff3; color: #1c2333; cursor: pointer; }
+.btn.small { padding: 7px 10px; font-size: 12px; }
+.btn.primary { background: #c0392b; color: #fff; }
+.btn.ghost { background: none; border: 1px solid #dfe3e9; }
+.btn.full { width: 100%; margin-top: 10px; }
+.btn:disabled { opacity: .6; }
+a.btn { text-decoration: none; display: inline-block; text-align: center; }
+
+label { display: block; font-size: 12px; color: #78808f; margin: 10px 0 4px; }
+input, textarea { width: 100%; border: 1px solid #dfe3e9; border-radius: 8px; padding: 9px 10px; font-size: 14px; font-family: inherit; }
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); display: flex; align-items: flex-end; justify-content: center; z-index: 20; }
+.sheet { background: #fff; width: 100%; max-width: 480px; border-radius: 16px 16px 0 0; padding: 18px; max-height: 85vh; overflow-y: auto; }
+.sheet h3 { margin: 0 0 8px; }
